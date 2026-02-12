@@ -1,7 +1,6 @@
-package com.soundloud.feature.auth
+package com.soundloud.feature.auth.presentation
 
 import androidx.compose.runtime.Immutable
-import kotlinx.coroutines.flow.StateFlow
 
 @Immutable
 interface AuthComponent {

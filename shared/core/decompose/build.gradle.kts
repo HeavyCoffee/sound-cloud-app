@@ -8,6 +8,7 @@ kotlin {
             api(projects.lib.stateReducer)
             api(libs.decompose)
             api(libs.decompose.composeExt)
+            api(libs.essenty.lifecylce)
             implementation(libs.kotlinx.coroutines.core)
         }
     }

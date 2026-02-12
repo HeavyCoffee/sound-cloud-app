@@ -16,6 +16,9 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+}
 
 dependencyResolutionManagement {
     repositories {
@@ -41,7 +44,7 @@ internal fun Settings.includeProjects(
     }
 
     fun isAvailableDir(file: File): Boolean {
-        return !ignoreDirs.contains(file.name) && file != rootDir
+        return ignoreDirs.contains(file.name).not() && file != rootDir
     }
 
     fun getProjectPath(projectDir: File): String {

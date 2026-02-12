@@ -99,6 +99,7 @@ kotlin-serializationPlugin = { id = "org.jetbrains.kotlin.plugin.serialization",
 androidx-room = { id = "androidx.room", version.ref = "room" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+build-konfig = { id = "com.codingfeline.buildkonfig", version.ref = "build-config" }
 
 # build-logic plugins
 buildlogic-compose = { id ="build-logic.compose" }
