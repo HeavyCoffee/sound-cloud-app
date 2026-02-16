@@ -23,6 +23,7 @@ sqlite = "2.6.2"
 decompose = "3.4.0"
 coil = "3.3.0"
 essenty-lifecycle = "2.5.0"
+build-config = "0.17.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -102,7 +103,7 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 build-konfig = { id = "com.codingfeline.buildkonfig", version.ref = "build-config" }
 
 # build-logic plugins
-buildlogic-compose = { id ="build-logic.compose" }
+buildlogic-kmp-compose = { id ="build-logic.kmp.compose" }
 buildlogic-kmp-library = { id ="build-logic.kmp.library" }
 buildlogic-kmp-di = { id ="build-logic.kmp.di" }
 buildlogic-android-app = { id ="build-logic.android.app" }

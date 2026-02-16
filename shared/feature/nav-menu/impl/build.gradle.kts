@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.buildlogic.kmp.library)
     alias(libs.plugins.buildlogic.kmp.di)
-    alias(libs.plugins.buildlogic.compose)
+    alias(libs.plugins.buildlogic.kmp.compose)
     alias(libs.plugins.kotlin.serializationPlugin)
 }
 

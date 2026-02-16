@@ -13,9 +13,9 @@ gradlePlugin {
     val pluginPath = "plugin"
 
     plugins {
-        register("ComposePlugin") {
-            id = "$pluginPrefix.compose"
-            implementationClass = "$pluginPath.ComposeConventionPlugin"
+        register("KmpComposePlugin") {
+            id = "$pluginPrefix.kmp.compose"
+            implementationClass = "$pluginPath.KmpComposeConventionPlugin"
         }
         register("KmpLibraryPlugin") {
             id = "$pluginPrefix.kmp.library"

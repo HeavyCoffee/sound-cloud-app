@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.buildlogic.android.app)
-    alias(libs.plugins.buildlogic.compose)
+    alias(libs.plugins.buildlogic.kmp.compose)
 }
 
 dependencies {

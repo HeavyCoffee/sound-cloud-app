@@ -1,7 +1,7 @@
 
 plugins {
     alias(libs.plugins.buildlogic.kmp.library)
-    alias(libs.plugins.buildlogic.compose)
+    alias(libs.plugins.buildlogic.kmp.compose)
     alias(libs.plugins.buildlogic.kmp.di)
     alias(libs.plugins.kotlin.serializationPlugin)
 }
@@ -24,6 +24,8 @@ kotlin {
             implementation(projects.shared.core.common)
             implementation(projects.shared.core.ui)
             implementation(projects.shared.core.decompose)
+            implementation(projects.shared.feature.auth.api)
+            implementation(projects.shared.feature.navMenu.api)
         }
     }
 }

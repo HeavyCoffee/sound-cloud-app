@@ -6,6 +6,8 @@ import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.decompose.router.stack.childStack
 import com.arkivanov.decompose.value.Value
 import com.soundloud.core.decompose.decompose.ext.AppComponentContext
+import com.soundloud.feature.auth.presentation.AuthComponent
+import com.soundloud.feature.navmenu.NavMenuComponent
 import kotlinx.serialization.Serializable
 
 interface AppRootComponent {
@@ -29,8 +31,8 @@ internal class AppRootComponentImpl(
         componentContext: AppComponentContext
     ): FlowComponent = when (config) {
         FlowConfig.Launch -> FlowComponent.Launch
-        FlowConfig.Auth -> FlowComponent.Auth
-        FlowConfig.NavMenu -> FlowComponent.NavMenu
+        FlowConfig.Auth -> FlowComponent.Auth()
+        FlowConfig.NavMenu -> FlowComponent.NavMenu()
     }
 }
 
@@ -39,13 +41,13 @@ sealed interface FlowComponent {
     open fun Content() = Unit
 
     data object Launch : FlowComponent
-    data object Auth : FlowComponent {
+    data class Auth(val component: AuthComponent) : FlowComponent {
         @Composable
-        override fun Content() {}
+        override fun Content() = component.Content()
     }
-    data object NavMenu : FlowComponent {
+    data class NavMenu(val component: NavMenuComponent) : FlowComponent {
         @Composable
-        override fun Content() {}
+        override fun Content() = component.Content()
     }
 }
 
